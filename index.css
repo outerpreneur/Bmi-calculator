@@ -1,0 +1,158 @@
+:root {
+  --blue: #345ff6;
+  --gunmetal: #253347;
+  --dark-metal-blue: #5e6e85;
+  --border-color: #d8e2e7;
+  --pure-white: #fff;
+
+  /* typography */
+  --font-inter: "Inter", sans-serif;
+  --heading-xl: 64px;
+  --heading-l: 48px;
+  --heading-m: 24px;
+  --heading-s: 20px;
+  --body-m: 16px;
+  --body-m-bold: 16px;
+  --body-s: 14px;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  background-color: var(--pure-white);
+  font-family: var(--font-inter);
+}
+
+#tool {
+  height: 737px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  padding-left: 1.5em;
+}
+
+.description {
+  padding-left: 5%;
+  padding-right: 20%;
+  padding-top: 15%;
+  background-color: blue;
+  width: 40%;
+  background: linear-gradient(to bottom right, #fff, #b3d3f1);
+  border-radius: 0 0 35px 35px;
+}
+
+.description h1 {
+  font-size: var(--heading-l);
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+
+.description-heading {
+  max-width: 500px;
+}
+
+.calculator {
+  background-color: var(--pure-white);
+  position: absolute;
+  height: 50%;
+  right: 15%;
+  top: 20%;
+  bottom: 50%;
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 16px;
+  box-shadow: 15px 15px 24px 11px rgba(179, 211, 241, 0.34);
+  -webkit-box-shadow: 15px 15px 24px 11px rgba(179, 211, 241, 0.34);
+  -moz-box-shadow: 15px 15px 24px 11px rgba(179, 211, 241, 0.34);
+}
+
+.calculator-heading {
+  font-size: var(--heading-m);
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+form input[type="radio"] {
+  accent-color: var(--blue);
+  background-color: #345ff6;
+}
+
+form input[type="radio"] {
+  -ms-transform: scale(1.8); /* IE 9 */
+  -webkit-transform: scale(1.8); /* Chrome, Safari, Opera */
+  transform: scale(1.8);
+  margin-right: 1.2em;
+  /* height: 35px;
+  width: 35px; */
+}
+
+.volume-measures {
+  display: flex;
+  gap: 2em;
+}
+
+form input[type="input"] {
+  height: 39px;
+  border-radius: 12px;
+  border: 1px solid gray;
+  padding: 0.6em;
+  font-size: 25px;
+  padding-left: 1.5em;
+}
+
+form label {
+  font-size: var(--body-s);
+  color: gray;
+  margin-bottom: 0.5em;
+}
+
+.height {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.weight {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.results {
+  background-color: var(--blue);
+  border-radius: 10px 105px 105px 10px;
+  padding: 2em;
+  display: flex;
+  color: var(--pure-white);
+}
+
+.bmi-result {
+  flex: 1;
+}
+
+.number {
+  font-size: var(--heading-xl);
+}
+
+.bmi-suggestions {
+  flex: 1;
+}
