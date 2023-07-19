@@ -120,6 +120,10 @@ form input[type="input"] {
   padding-left: 1.2em;
 }
 
+form input[type="input"]::placeholder {
+  color: #d8e2e7;
+}
+
 form label {
   font-size: var(--body-s);
   color: gray;
