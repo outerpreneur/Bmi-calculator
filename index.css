@@ -21,6 +21,7 @@ h1,
 h2,
 h3,
 h4,
+h5,
 p,
 li,
 figure,
@@ -71,7 +72,7 @@ body {
   right: 15%;
   top: 20%;
   bottom: 50%;
-  padding: 1.5em;
+  padding: 2em;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -116,13 +117,34 @@ form input[type="input"] {
   border: 1px solid gray;
   padding: 0.6em;
   font-size: 25px;
-  padding-left: 1.5em;
+  padding-left: 1.2em;
 }
 
 form label {
   font-size: var(--body-s);
   color: gray;
   margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input {
+  padding-right: 30px; /* Adjust the value as needed to create space for the span */
+}
+
+.input-wrapper span {
+  color: var(--blue);
+  font-size: var(--heading-m);
+  font-weight: bold;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  bottom: 0;
+  padding: 0 10px;
+  line-height: 38px; /* Adjust the line-height value to vertically center the text */
 }
 
 .height {
@@ -145,6 +167,10 @@ form label {
   color: var(--pure-white);
 }
 
+.total-results {
+  display: none;
+}
+
 .bmi-result {
   flex: 1;
 }
@@ -153,6 +179,175 @@ form label {
   font-size: var(--heading-xl);
 }
 
+.enter-data h2 {
+  font-size: var(--heading-m);
+}
+
+.enter-data p {
+  margin-top: 20px;
+  font-size: var(--body-m);
+}
+
 .bmi-suggestions {
   flex: 1;
+}
+
+/* Explantation */
+
+#explanation {
+  display: flex;
+  padding: 5em 8em;
+}
+
+.column-1 {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.column-1 img {
+  width: 100%;
+}
+
+.column-2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5em;
+  font-family: var(--font-inter);
+  font-size: var(--heading-m);
+}
+
+.column-2 h2 {
+  margin-bottom: 1em;
+}
+
+.column-2 p {
+  font-size: var(--body-m);
+  font-weight: 100;
+  color: var(--dark-metal-blue);
+}
+
+/* features */
+
+#facts {
+  display: grid;
+  width: 100%;
+  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  background: linear-gradient(to right, #fff, #b3d3f130);
+  height: 500px;
+  padding: 0 2em;
+  font-family: var(--font-inter);
+}
+
+.fact {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: start;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.fact img {
+  margin-bottom: 15px;
+}
+
+.fact h4 {
+  font-size: var(--heading-m);
+}
+
+.fact p {
+  color: var(--dark-metal-blue);
+  font-size: var(--body-m);
+  line-height: 30px;
+}
+
+/* limitations */
+
+#limitations {
+  padding: 7em 0;
+  display: flex;
+  height: 500px;
+  font-family: var(--font-inter);
+  margin-bottom: 4em;
+  position: relative;
+}
+
+.limitations-description {
+  width: 40%;
+  padding-left: 4em;
+}
+
+.limitations-description h2 {
+  font-size: var(--heading-l);
+}
+
+.limitations-description p {
+  font-size: var(--body-m);
+  color: var(--dark-metal-blue);
+  margin-top: 2em;
+}
+
+.limitations-section {
+  position: absolute;
+  right: 10%;
+  min-width: 70%;
+}
+
+.limitations-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: ". . gender ." ". age muscle ." "pregnancy race . .";
+  row-gap: 2em;
+}
+
+.limitation-fact {
+  max-width: 250px;
+  border: none;
+  padding: 2em;
+  box-shadow: 15px 15px 24px 11px rgba(179, 211, 241, 0.34);
+  -webkit-box-shadow: 15px 15px 24px 11px rgba(179, 211, 241, 0.34);
+  -moz-box-shadow: 15px 15px 24px 11px rgba(179, 211, 241, 0.34);
+  border-radius: 16px;
+}
+
+.limitation-fact {
+  color: var(--dark-metal-blue);
+  line-height: 25px;
+}
+
+.title-row {
+  display: flex;
+  gap: 1.5em;
+  margin-bottom: 1em;
+}
+
+.limitation-fact h5 {
+  color: var(--gunmetal);
+  font-size: var(--heading-s);
+}
+
+.gender {
+  grid-area: gender;
+}
+
+.age {
+  grid-area: age;
+}
+
+.muscle {
+  grid-area: muscle;
+}
+
+.pregnancy {
+  grid-area: pregnancy;
+}
+
+.race {
+  grid-area: race;
 }
